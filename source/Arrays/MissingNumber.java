@@ -20,7 +20,7 @@ public class MissingNumber {
 	 * @param array is the input array
 	 * @return the missing number in the array
 	 */
-	public long findMissingNumber(int array[]) {
+	public static long findMissingNumber(int array[]) {
 		
 		long actualSum=0;
 		long expectedSum = (array.length * (array.length+1))/2;
@@ -40,6 +40,10 @@ public class MissingNumber {
 		for(int index=0; index < size; index++) {
 			array[index] = input.nextInt();
 		}
+		
+		System.out.println(findMissingNumber(array));
+		
+		input.close();
 	}
 	
 	
