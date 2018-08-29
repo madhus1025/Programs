@@ -1,0 +1,16 @@
+Array is a collection of same type of elements, It can be of primitive type or custom data type.
+
+In java the array is created dynamically.
+
+Example:
+	int size = readIntegerFromInput();
+	int array[] = new int[size];
+	
+You need not explicitly mention then size of array before compilation.
+
+The way arrays are stored in the memory are,
+whenever we mention new keyword the space is allocated in the heap and the reference to it is maintained
+in the stack
+
+The direct superclass of an array type is Object.
+Every array type implements the interfaces Cloneable and java.io.Serializable.
