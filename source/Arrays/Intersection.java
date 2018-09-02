@@ -68,6 +68,7 @@ public class Intersection {
 		for(int index=0; index < list.size(); index++) {
 			System.out.println(list.get(index));
 		}
+		input.close();
 	}
 	
 	
