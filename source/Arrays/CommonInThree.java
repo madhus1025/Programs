@@ -102,5 +102,8 @@ public class CommonInThree {
 		
 		ArrayList<Integer> list = findIntersection(array1,array2,array3);
 		
+		for(int index=0; index < list.size(); index++) {
+			System.out.println(list.get(index));
+		}
 	}
 }
