@@ -4,32 +4,36 @@ import java.util.*;
 
 /**
  * Given an array, find the first repeating element
- * Input : {1,2,3,1,3,2}
+ * Input : {1,2,3,3}
  * Output : {1}
  * 
  * @author Madhu Avinash
  *
  */
-public class FirstRepeating {
+public class FirstNonRepeating {
 
 	/**
 	 * Insert all the elements into hash set, if any element already exists in the
-	 * array, return that element since that is the first non repeating element
+	 * set, remove that element. At the end of the iteration return the first element in the hash set
 	 * @param array
-	 * @return First repeating element, returns -1 incase of no repeating elements
+	 * @return First non repeating element, returns -1 incase all elements are repeated
 	 */
-	public static int findFirstRepeatingElement(int array[]) {
+	public static int findFirstNonRepeatingElement(int array[]) {
 		
 		HashSet<Integer> set = new HashSet<Integer>();
 		
 		for(int index=0; index < array.length; index++) {
 			if(set.contains(array[index])) {
-				return array[index];
+				set.remove(array[index]);
 			}
-			set.add(array[index]);
+			else {
+				set.add(array[index]);
+			}
 		}
-		return -1;
-		
+		if(set.size() == 0)
+			return -1;
+		else
+			return set.iterator().next();
 	}
 	
 	public static void main(String args[]) {
@@ -40,6 +44,6 @@ public class FirstRepeating {
 		for(int index=0; index < size; index++) {
 			array[index] = input.nextInt();
 		}
-		System.out.println(findFirstRepeatingElement(array));
+		System.out.println(findFirstNonRepeatingElement(array));
 	}
 }
