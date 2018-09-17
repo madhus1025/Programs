@@ -11,6 +11,10 @@ import java.util.Scanner;
  */
 public class ReArrange {
 
+	/**
+	 * Traverse through the array, if you find two same items, pause there and search for an alternative through out the array and replace it
+	 * @param array
+	 */
 	public static void arrangeAlternate(int array[]) {
 		
 		int flag= array[0] > 0?1:-1;
