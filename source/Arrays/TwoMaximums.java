@@ -12,7 +12,12 @@ import java.util.Scanner;
  */
 public class TwoMaximums {
 
-	
+	/**
+	 * This is same as getting the maximum of the array, just that we transfer that max value to max2 if we find any other element
+	 * in array greater than max
+	 * @param array
+	 * @return an array with first maximum and second
+	 */
 	public static int[] getTwoMaximums(int array[]) {
 		
 		int result[] = new int[2];
